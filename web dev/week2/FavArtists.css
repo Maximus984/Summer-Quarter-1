@@ -1,0 +1,17 @@
+body {
+   background-color: rgb(144, 137, 137)
+}
+
+img{
+   width: 100px;
+   height: 100px;
+   display: block;
+    margin: 10ep auto;
+}
+
+p{
+ color:yellow;
+ font-size: 20px;
+ text-align: center;
+
+}
