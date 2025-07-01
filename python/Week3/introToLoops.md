@@ -13,4 +13,4 @@ A collection of things.
 
 5. There are 2 types of loops. How do you know which to use when using loops?
 We use a for loop when we know how many repetitions we want to do. 
-We use a while when we do not know how many repetitions we want to do.
+We use a while when we do not know how many repetitions we want to do.\
