@@ -1,0 +1,33 @@
+class StudentProfile:
+    
+    def _init_(self, name, age, grade, hobbies):
+        self.student = {}
+        self.student["Name"] = name
+        self.student["Age"] = age
+        self.student["Grade"] = grade
+        self.student["hobbies"] = hobbies
+
+    def SetName(self):
+        studentName = input("enter your student name: ")
+        self.SetNamestudent["name"] = studentName
+        self.student["Name:"] = studentName
+
+    
+    studentAge = input("enter your student name: ")
+    self.student["age"] = studentAge
+
+
+    studentgrade = input("enter your student grade: ")
+    self.student["grade"] = studentgrade
+
+    habbies = []
+    hobby = input("enter your student habbies; type 'done' when finished: ").lower()
+    habbies.append(hobby)
+
+    while hobby != "done":
+        hobby = input("enter your student habbies; type 'done' when finished: ").lower()
+        hobby.append(hobby)
+        
+        student["habbies"] = habbies
+        
+        print(student)
