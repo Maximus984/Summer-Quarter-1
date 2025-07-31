@@ -11,7 +11,7 @@
         <div class="container">
             <nav>
                 <img src="images/o.png" class="logo">
-                
+
                 
                 
                 </ul>
@@ -34,12 +34,12 @@ Hero Shooter: You choose from a diverse roster of unique heroes, each with their
 Live Service Game: It receives regular seasonal updates that add new heroes, maps, game modes, and cosmetic content to keep the experience fresh.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Mercy</p>
-                        <p class="tab-links">Widowmaker</p>
-                        <p class="tab-links">De.va</p>
+                        <p class="tab-links active-link" onclick="opentab('mercy')">Mercy</p>
+                        <p class="tab-links" onclick="opentab('widowmaker')">Widowmaker</p>
+                        <p class="tab-links" onclick="opentab('dv.a')">De.va</p>
                     </div>
 
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="mercy">
 
                         <div>
                             <img src="images/MercyIcon.jpeg">
@@ -51,18 +51,22 @@ Live Service Game: It receives regular seasonal updates that add new heroes, map
                                 <li><span>Ultimate Ability</span><br>Valkrie</li>
                             </ul>
                         </div>
-
+                    </div>
+                    
+                    <div class="tab-contents" id="widowmaker">
                         <div>
                             <img src="images/widowmaker.jpeg">
                         </div>
                         <div>
                             <ul>
-                                <li><span>Class/Role</span><br>Support</li>
-                                <li><span>Abilities</span><br>Ressurrection, Guardian Angel</li>
-                                <li><span>Ultimate Ability</span><br>Valkrie</li>
+                                <li><span>Class/Role</span><br>DPS</li>
+                                <li><span>Abilities</span><br> venom mine, Grppling hook</li>
+                                <li><span>Ultimate Ability</span><br>Wall Hacking </li>
                             </ul>
                         </div>
-
+                    </div>
+                        
+                    <div class="tab-contents" id="dv.a">
                         <div>
                             <img src="images/dvaIcon.jpeg">
                         </div>
@@ -73,14 +77,40 @@ Live Service Game: It receives regular seasonal updates that add new heroes, map
                                 <li><span>Ultimate Ability</span><br>Call Mech Suit, Self-Destruct Sequence</li>
                             </ul>
                         </div>
-
                     </div>
-
+                    
                     
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <!-----------HTML <audio> autoplay ----------- -->
+    <audio controls>
+        <source src="Audio/So Cynical (Badum).mp3" type="audio/mpeg">
+
+
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
 </body>
 </html>
