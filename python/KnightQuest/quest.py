@@ -33,11 +33,11 @@ def GetScreenCoords(x, y):
 def DrawBackground():
     for y in range (GRID_HEIGHT): # loop over each grid row
         for x in range (GRID_WIDTH): # loop over each grid column
-        if x % 2 == y % 2:
+            if x % 2 == y % 2:
             #Draw the floor 1 panel
-            screen.blit("floor1", GetScreenCoords(x, y)) # Draws the named imaged at the given screen position
-        else:
-            screen.blit("floor2", GetScreenCoords(x, y))
+                screen.blit("floor1", GetScreenCoords(x, y)) # Draws the named imaged at the given screen position
+            else:
+                screen.blit("floor2", GetScreenCoords(x, y))
 #########################
 ########## 2.1 ##########
 # This function takes in an actor as an argument & 
@@ -75,7 +75,7 @@ def SetupGame():
                 keysToCollect.append(key)
             elif square == "G":
                 #create a guard actor
-                guard = Actor("guard",anchor=("left", "top"), pos = GetScreenCoords(x, y))
+                guard = Actor("tom",anchor=("left", "top"), pos = GetScreenCoords(x, y))
                 #add this key to our list of guards
                 guards.append(guard)
 #########################
@@ -111,12 +111,12 @@ def DrawGameOver():
     # else meaning the player lost the game 
     else:
         # draw a you lose message on screen
-        Screen.draw.text("YOU LOSE!", midtop = screenMiddle,
+        screen.draw.text("YOU LOSE!", midtop = screenMiddle,
                          fontsize = GRID_SIZE, color = "red", owidth=10)
 
 
 # Draw the restart message on screen
-    Screen.darw.text("Press space to play again",
+    screen.draw.text("Press space to play again",
                  midtop=(WIDTH/2, HEIGHT/2 + GRID_SIZE),
                  fontsize=GRID_SIZE/2,
                  color="cyan", owidth=0)
@@ -143,7 +143,7 @@ def on_key_up(key):
     # check if the space bar has been pressed once the game is over
     if key == keys.SPACE and gameOver:
         # reset the game
-        SetupGame
+        SetupGame()
 ###############################
 
 
